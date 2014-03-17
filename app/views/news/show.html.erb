@@ -1,0 +1,21 @@
+<% provide(:title, 'Медицинские новости') %>
+<table>
+  <tr>
+    <td valign="top">
+        <h3 class="column_headers"><%= @news.title %></h3>
+        <div class="date_margin">
+          Дата публикации:<br>
+          <%= @news.created_at.strftime("%d.%m.%Y") %>
+        </div>
+        <%= @news.content.html_safe %>
+    </td>
+  </tr>
+  <tr>
+    <td valign="bottom">
+      <div class="back_buttons">
+         <%= link_to "На Главную", root_url, class: "btn btn-success"%>
+      </div>
+    </td>
+  </tr>
+</table>
+

@@ -1,0 +1,72 @@
+@import "bootstrap";
+@import 'jscrollpane.css';
+@import 'jscrollpane-override.css.scss';
+
+/*Styles for left stacked menu*/
+#gen_menu_text{
+font-size:150%;
+font-style:bold;
+width:100%;
+}
+
+/*Styles for footer*/
+#footer{
+width:100%;
+height:10%;
+border-top: 5px solid #08C;
+font-size:150%;
+font-style:bold;
+text-align:center;
+}
+
+/*Margin-top for button 'Back to root':*/
+.back_buttons{
+margin-top:30px;
+margin-bottom:20px;
+}
+
+/*Margins for date in news and articles show pages*/
+.date_margin{
+margin-top:45px;
+margin-bottom:25px;
+}
+
+/*Font parameters for terms in shares/show:*/
+.share_times_font{
+font-family: 'Times New Roman', Times, serif;
+font-style: italic;
+font-size: 150%;
+color: #08C;
+}
+
+/*Width for Bootstrap table in vacancies:*/
+.custom_table{
+width: 700px;
+}
+
+/*Font size for stores in price list:*/
+.store_font{
+font-size: 150%;
+}
+
+/*Parameters for rendering telephone in div*/
+.phone_render{
+width:800px;
+float:right;
+}
+
+/*Style for phone image*/
+.phone_style{
+margin-top:145px;
+}
+
+/*Parameters for rendering page content in div*/
+.content_width{
+width:800px;
+height:100%;
+}
+
+
+
+
+

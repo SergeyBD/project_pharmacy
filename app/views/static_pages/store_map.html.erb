@@ -1,0 +1,35 @@
+<% provide(:title, 'Наши аптеки') %>
+<div style="width:800px; float:right">
+  <%= render 'layouts/phone' %>
+</div>
+<div style="width:800px">
+  <table width="80%">
+    <tr>
+      <td>
+        <h1 class="stores_headers">Наши аптеки</h1>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <ul class="nav nav-tabs">
+          <li class="active">
+            <%= link_to "Карта", store_map_path %>
+          </li>
+          <li><%= link_to "Список", store_table_path %></li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div id="map"></div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="back_buttons">
+            <%= link_to "На Главную", root_url, class:"btn btn-success"%>
+        </div>
+      </td>
+    </tr>
+  </table>
+</div>

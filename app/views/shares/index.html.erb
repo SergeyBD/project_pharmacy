@@ -1,0 +1,32 @@
+<% provide(:title, 'Наши акции') %>
+<div class="phone_render">
+  <%= render 'layouts/phone' %>
+</div>
+<div class="content_width">
+    <table cellpadding = "5" width="80%">
+      <tr>
+        <td colspan="2">
+          <h1 style="color:green; margin-bottom:75px">Наши акции</h1>
+        </td>
+      </tr>
+      <% @shares.each do |s| %>
+        <tr>
+          <td colspan="2">
+            <h2><%= link_to s.name, s %></h2>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <%= image_tag s.image.thumb('270x170!').url, alt: 'Loading...' %>
+          </td>
+        </tr>
+      <% end %>
+        <tr>
+          <td>
+            <div class="back_buttons">
+                <%= link_to "На Главную", root_url, class: "btn btn-success"%>
+            </div>
+          </td>
+        </tr>
+    </table>
+</div>

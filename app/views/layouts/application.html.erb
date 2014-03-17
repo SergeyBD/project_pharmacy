@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html style="height:100%">
+<head>
+  <title><%= yield(:title) %></title>
+  <%= stylesheet_link_tag "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  <script src="http://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU" type="text/javascript"></script>
+  <%= render 'layouts/shim' %>
+</head>
+<body style="height:100%">
+
+<table width="100%" height="90%">
+  <tr>
+    <td valign="top" height="150px">
+      <%= render 'layouts/logotype' %>
+    </td>
+    <td width="2%">
+
+    </td>
+    <td rowspan="2" valign="top">
+       <%= yield %>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top" width="180px">
+      <p style="margin-bottom:5px"></p>
+      <%= render 'layouts/menu' %>
+    </td>
+    <td width="2%">
+
+    </td>
+  </tr>
+</table>
+<div id="footer">
+  <p style="margin-top:2%; color:green">Clover Pharm &copy; 2014 </p>
+</div>
+</body>
+</html>

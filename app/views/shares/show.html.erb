@@ -1,0 +1,35 @@
+<% provide(:title, 'Наши акции') %>
+<div class="phone_render">
+  <%= render 'layouts/phone' %>
+</div>
+<div class="content_width">
+    <table cellpadding = "5" width="95%">
+      <tr>
+        <td colspan="2">
+            <h3 class="column_headers" style="margin-bottom:90px"><%= @share.name %></h3>
+        </td>
+      </tr>
+      <tr>
+        <td>
+            <%= image_tag @share.image.thumb('600x450').url, alt: 'Loading...' %>
+        </td>
+        <td valign="top" class="share_times_font">
+          <p style="font-weight:bold; color:green; font-style:normal">Сроки проведения акции:</p>
+          <%= @share.start_time%><br>
+          <%= @share.end_time%>
+        </td>
+      </tr>
+      <tr>
+        <td width="50%">
+            <%= @share.body %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+            <div class="back_buttons">
+                <%= link_to "На Главную", root_url, class: "btn btn-success"%>
+            </div>
+        </td>
+      </tr>
+    </table>
+</div>

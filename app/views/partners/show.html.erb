@@ -1,0 +1,34 @@
+<% provide(:title, 'Наши партнеры') %>
+<div class="phone_render">
+  <%= render 'layouts/phone' %>
+</div>
+<div class="content_width">
+    <table cellpadding = "5" width="80%">
+      <tr>
+        <td colspan="2">
+            <h3 class="column_headers" style="margin-bottom:75px"><%= @partner.name %></h3>
+        </td>
+      </tr>
+      <tr>
+        <td valign="top" rowspan="2">
+            <%= image_tag @partner.image.thumb('260x130!').url, alt: 'Loading...' %>
+        </td>
+        <td>
+            <b>Сайт:</b>
+            <p><b><%= link_to @partner.reference, @partner.reference %></b></p>
+        </td>
+       </tr>
+      <tr>
+        <td>
+            <%= @partner.body %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+            <div class="back_buttons">
+                <%= link_to "На Главную", root_url, class: "btn btn-success"%>
+            </div>
+        </td>
+      </tr>
+    </table>
+</div>

@@ -1,0 +1,66 @@
+<% provide(:title, 'Наши аптеки') %>
+<div style="width:800px; float:right">
+  <%= render 'layouts/phone' %>
+</div>
+<div style="width:800px">
+    <table width="80%">
+      <tr>
+        <td>
+          <h1 style="color:green; margin-bottom:66px">Наши аптеки</h1>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <ul class="nav nav-tabs">
+              <li><%= link_to "Карта", store_map_path %></li>
+              <li class="active">
+                <%= link_to "Список", store_table_path %>
+              </li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>
+           <table class="table table-striped table-hover custom_table" cellspacing="5" cellpadding="10">
+              <tr>
+                <th>
+                  Название аптеки
+                </th>
+                <th>
+                  Адрес
+                </th>
+                 <th>
+                  Контактный телефон
+                </th>
+                <th>
+                  Часы работы
+                </th>
+              </tr>
+              <% @stores.each do |store| %>
+               <tr>
+                    <td style="color:#08C">
+                      <%= store.name %>
+                    </td>
+                    <td style="color:green">
+                      <%= store.address %>
+                    </td>
+                    <td style="color:rgb(119, 155, 166)">
+                      <%= store.telephone %>
+                    </td>
+                    <td style="color:black">
+                      <%= store.operation_hours %>
+                    </td>
+              </tr>
+              <% end %>
+            </table>
+        </td>
+      </tr>
+      <tr>
+        <td>
+           <div class="back_buttons">
+                <%= link_to "На Главную", root_url, class: "btn btn-success"%>
+            </div>
+        </td>
+      </tr>
+    </table>
+</div>

@@ -1,0 +1,41 @@
+// Place all the styles related to the Static_Pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/*Class for formatting articles and news*/
+.columns{
+max-height:700px;
+overflow: auto;
+margin-bottom:40px;
+   .jspVerticalBar {
+       width: 15px;
+    }
+    .jspTrack {
+    background-color: rgb(213, 213, 213);
+    }
+    .jspDrag {
+    background-color: #08C;
+    border-radius: 10px;
+    }
+}
+
+/*Styles for headers in articles and news, partners/show*/
+.column_headers{
+color:green;
+font-size:200%;
+}
+
+/*Styles for headers in store_map and store_table*/
+.stores_headers{
+margin-bottom:60px;
+color:green;
+}
+/*Margins for images at home page*/
+.image_margin{
+margin-left:5%;
+}
+
+#map {
+  width:700px;
+  height:700px;
+}

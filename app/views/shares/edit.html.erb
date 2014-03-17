@@ -1,0 +1,7 @@
+<%= form_for @share do |s| %>
+  <%= s.label :name %>
+  <%= s.text_field :name %>
+  <%= s.label :image %>
+  <%= s.file_field :image %>
+  <%= s.submit 'Create' %>
+<% end %>

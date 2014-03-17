@@ -1,0 +1,76 @@
+<% provide(:title, 'Главная') %>
+<table width="100%" cellpadding="5">
+  <tr>
+    <td colspan="3" width="100%" height="140px">
+        <h1 style="color:green; text-align:center">Вас приветствует сеть аптек Clover Pharm</h1>
+        <h1 style="color:green; text-align:center">Вы находитесь на Главной странице. Добро пожаловать!</h1>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center" width="65%">
+        <div id="myCarousel" class="carousel slide" style="width:870px">
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+            <!-- Carousel items -->
+            <div class="carousel-inner">
+                <div class="active item"><%= link_to image_tag('c_1.png'), share_path(5) %></div>
+                <div class="item"><%= image_tag('c_2.png') %></div>
+                <div class="item"><%= link_to image_tag('c_3.png'), vacancies_path %></div>
+            </div>
+            <!-- Carousel nav -->
+            <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+            <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+        </div>
+
+          <script>
+                $('.carousel').carousel({
+                    interval: false
+                })
+          </script>
+    </td>
+    <td>
+       <img src="assets/telephone.png" class='image_margin'>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+    <h2 style="color:green">Медицинские новости:</h2>
+    <div  class="columns">
+        <table>
+          <% @news.each do |news| %>
+            <tr>
+              <td>
+                <h3><%=link_to news.title, news_path(news) %></h3>
+                <p><%= news.created_at.strftime("%d.%m.%Y") %></p>
+                <%= truncate news.content, length:250 %>
+              </td>
+            </tr>
+          <% end %>
+        </table>
+    </div>
+    </td>
+    <td>
+        <h2 style="color:green">Медицинские статьи:</h2>
+            <div class="columns">
+                <table>
+                  <% @articles.each do |article| %>
+                    <tr>
+                      <td>
+                         <h3><%=link_to article.title, article_path(article) %></h3>
+                         <p><%= article.created_at.strftime("%d.%m.%Y") %></p>
+                         <%= truncate article.content, length:250 %>
+                      </td>
+                    </tr>
+                  <% end %>
+                </table>
+            </div>
+    </td>
+    <td valign="top">
+        <%= link_to image_tag('store_list_banner.png', size: '400x600', class: 'image_margin'), store_map_path %>
+    </td>
+  </tr>
+</table>
