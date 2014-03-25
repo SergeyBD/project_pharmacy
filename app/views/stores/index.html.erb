@@ -1,29 +1,30 @@
 <% provide(:title, 'Прайс-лист') %>
-<div class="phone_render">
-  <%= render 'layouts/phone' %>
+
+<div class="row-fluid">
+  <div class="span12" style="margin-bottom:90px">
+    <h1 class="pages_headers">Выберите аптеку</h1>
+  </div>
 </div>
-<div class="content_width">
-    <table cellpadding='15' width="700px" height="100%">
-      <tr>
-        <td>
-          <h1 style="color:green; margin-bottom:70px">Выберите аптеку</h1>
-        </td>
-      </tr>
-      <% @stores.each do |store| %>
-        <tr>
-          <td>
+
+<div class="row-fluid">
+  <div class="span5">
+     <ul style="list-style-type:none">
+        <% @stores.each do |store| %>
+          <li style="margin-bottom:4.5%">
             <%= link_to(store) do %>
                 <strong class="store_font"><%= store.name %></strong> (<span><%= store.address %></span>)
             <% end %>
-          </td>
-        </tr>
-      <% end %>
-      <tr>
-        <td>
-          <div class="back_buttons">
-           <%= link_to "На Главную", root_url, class: "btn btn-success"%>
-          </div>
-        </td>
-      </tr>
-    </table>
- </div>
+          </li>
+        <% end %>
+     </ul>
+     <div class="back_buttons">
+        <%= link_to "На Главную", root_url, class: "btn btn-success"%>
+     </div>
+  </div>
+
+  <div class="span7">
+     <%= render 'layouts/phone' %>
+  </div>
+</div>
+
+

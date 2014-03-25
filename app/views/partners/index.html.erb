@@ -1,14 +1,14 @@
 <% provide(:title, 'Наши партнеры') %>
-<div class="phone_render">
-  <%= render 'layouts/phone' %>
+
+<div class="row-fluid">
+  <div class="span12">
+    <h1 style="color:green; margin-bottom:75px">Наши партнеры</h1>
+  </div>
 </div>
-<div class="content_width">
-    <table cellpadding = "5" width="80%">
-      <tr>
-        <td colspan="2">
-           <h1 style="color:green; margin-bottom:75px">Наши партнеры</h1>
-        </td>
-      </tr>
+
+<div class="row-fluid">
+  <div class="span7">
+    <table cellpadding = "5">
       <% @partners.each do |p| %>
         <tr>
           <td colspan="2">
@@ -24,12 +24,12 @@
           </td>
         </tr>
       <% end %>
-        <tr>
-          <td>
-            <div class="back_buttons">
-                <%= link_to "На Главную", root_url, class: "btn btn-success"%>
-            </div>
-          </td>
-        </tr>
     </table>
+    <div class="back_buttons">
+        <%= link_to "На Главную", root_url, class: "btn btn-success"%>
+    </div>
+  </div>
+  <div class="span5">
+    <%= render 'layouts/phone' %>
+  </div>
 </div>

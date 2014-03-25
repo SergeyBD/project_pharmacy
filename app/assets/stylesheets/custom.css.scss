@@ -1,34 +1,94 @@
 @import "bootstrap";
+@import "bootstrap-responsive";
 @import 'jscrollpane.css';
 @import 'jscrollpane-override.css.scss';
 
 /*Styles for left stacked menu*/
-#gen_menu_text{
+.gen_menu_text{
 font-size:150%;
 font-style:bold;
-width:100%;
+margin-bottom:15%;
 }
 
-/*Styles for footer*/
-#footer{
-width:100%;
-height:10%;
+.nav-header{
+font-size:140%;
+font-style:bold;
+margin-bottom:20%;
+color:green;
+}
+
+    /* Sticky footer styles
+    -------------------------------------------------- */
+
+html,
+body {
+height: 100%;
+/* The html and body elements cannot have any padding or margin. */
+}
+
+/* Wrapper for page content to push down footer */
+#wrap {
+min-height: 100%;
+height: auto !important;
+height: 100%;
+/* Negative indent footer by it's height */
+margin: 0 auto -60px;
+}
+
+/* Set the fixed height of the footer here */
+#push,
+#footer {
+height: 60px;
+}
+#footer {
+background-color: #f5f5f5;
 border-top: 5px solid #08C;
 font-size:150%;
 font-style:bold;
 text-align:center;
 }
 
+/* Lastly, apply responsive CSS fixes as necessary */
+@media (max-width: 767px) {
+#footer {
+  margin-left: -20px;
+  margin-right: -20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+}
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+.container {
+width: auto;
+max-width: 680px;
+}
+.container .credit {
+margin: 20px 0;
+}
+
+    /* Sticky footer styles
+    -------------------------------------------------- */
+
+
+/*Styles for headers in articles and news, partners/show, shares/show*/
+.column_headers{
+color:green;
+font-size:200%;
+}
+
+/*Color for headers in pages*/
+.pages_headers{
+color:green;
+}
+
 /*Margin-top for button 'Back to root':*/
 .back_buttons{
 margin-top:30px;
 margin-bottom:20px;
-}
-
-/*Margins for date in news and articles show pages*/
-.date_margin{
-margin-top:45px;
-margin-bottom:25px;
 }
 
 /*Font parameters for terms in shares/show:*/
@@ -39,32 +99,11 @@ font-size: 150%;
 color: #08C;
 }
 
-/*Width for Bootstrap table in vacancies:*/
-.custom_table{
-width: 700px;
-}
-
 /*Font size for stores in price list:*/
 .store_font{
 font-size: 150%;
 }
 
-/*Parameters for rendering telephone in div*/
-.phone_render{
-width:800px;
-float:right;
-}
-
-/*Style for phone image*/
-.phone_style{
-margin-top:145px;
-}
-
-/*Parameters for rendering page content in div*/
-.content_width{
-width:800px;
-height:100%;
-}
 
 
 

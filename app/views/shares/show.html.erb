@@ -1,14 +1,14 @@
 <% provide(:title, 'Наши акции') %>
-<div class="phone_render">
-  <%= render 'layouts/phone' %>
+
+<div class="row-fluid">
+  <div class="span12">
+     <h3 class="column_headers" style="margin-bottom:85px"><%= @share.name %></h3>
+  </div>
 </div>
-<div class="content_width">
-    <table cellpadding = "5" width="95%">
-      <tr>
-        <td colspan="2">
-            <h3 class="column_headers" style="margin-bottom:90px"><%= @share.name %></h3>
-        </td>
-      </tr>
+
+<div class="row-fluid">
+  <div class="span12">
+    <table cellpadding = "5" width="80%">
       <tr>
         <td>
             <%= image_tag @share.image.thumb('600x450').url, alt: 'Loading...' %>
@@ -24,12 +24,9 @@
             <%= @share.body %>
         </td>
       </tr>
-      <tr>
-        <td>
-            <div class="back_buttons">
-                <%= link_to "На Главную", root_url, class: "btn btn-success"%>
-            </div>
-        </td>
-      </tr>
     </table>
+    <div class="back_buttons">
+        <%= link_to "На Главную", root_url, class: "btn btn-success"%>
+    </div>
+  </div>
 </div>

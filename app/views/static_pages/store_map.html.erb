@@ -1,35 +1,28 @@
 <% provide(:title, 'Наши аптеки') %>
-<div style="width:800px; float:right">
-  <%= render 'layouts/phone' %>
+
+<div class="row-fluid">
+  <div class="span12">
+    <h1 class="pages_headers">Наши аптеки</h1>
+  </div>
 </div>
-<div style="width:800px">
-  <table width="80%">
-    <tr>
-      <td>
-        <h1 class="stores_headers">Наши аптеки</h1>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <ul class="nav nav-tabs">
-          <li class="active">
-            <%= link_to "Карта", store_map_path %>
-          </li>
-          <li><%= link_to "Список", store_table_path %></li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <div id="map"></div>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <div class="back_buttons">
-            <%= link_to "На Главную", root_url, class:"btn btn-success"%>
-        </div>
-      </td>
-    </tr>
-  </table>
+
+<div class="row-fluid">
+  <div class="span5" style="margin-top:25px">
+   <ul class="nav nav-tabs">
+      <li class="active">
+        <%= link_to "Карта", store_map_path %>
+      </li>
+      <li><%= link_to "Список", store_table_path %></li>
+   </ul>
+   <div id="map"></div>
+    <div class="back_buttons">
+        <%= link_to "На Главную", root_url, class: "btn btn-success"%>
+    </div>
+  </div>
+
+  <div class="span7">
+     <%= render 'layouts/phone' %>
+  </div>
 </div>
+
+
